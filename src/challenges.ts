@@ -96,6 +96,102 @@ export const challenges: Challenge[] = [
     ],
     triadName: 'G#',
   },
+  {
+    noteNames: [
+      'A',
+      'C',
+      'E',
+    ],
+    triadName: 'Am',
+  },
+  {
+    noteNames: [
+      'A#',
+      'C#',
+      'F',
+    ],
+    triadName: 'A#m',
+  },
+  {
+    noteNames: [
+      'B',
+      'D',
+      'F#',
+    ],
+    triadName: 'Bm',
+  },
+  {
+    noteNames: [
+      'C',
+      'D#',
+      'G',
+    ],
+    triadName: 'Cm',
+  },
+  {
+    noteNames: [
+      'C#',
+      'E',
+      'G#',
+    ],
+    triadName: 'C#m',
+  },
+  {
+    noteNames: [
+      'D',
+      'F',
+      'A',
+    ],
+    triadName: 'Dm',
+  },
+  {
+    noteNames: [
+      'D#',
+      'F#',
+      'A#',
+    ],
+    triadName: 'D#m',
+  },
+  {
+    noteNames: [
+      'E',
+      'G',
+      'B',
+    ],
+    triadName: 'Em',
+  },
+  {
+    noteNames: [
+      'F',
+      'G#',
+      'C',
+    ],
+    triadName: 'Fm',
+  },
+  {
+    noteNames: [
+      'F#',
+      'A',
+      'C#',
+    ],
+    triadName: 'F#m',
+  },
+  {
+    noteNames: [
+      'G',
+      'A#',
+      'D',
+    ],
+    triadName: 'Gm',
+  },
+  {
+    noteNames: [
+      'G#',
+      'B',
+      'D#',
+    ],
+    triadName: 'G#m',
+  },
 ]
 
 export interface Challenge {

@@ -4,7 +4,7 @@ import { NoteMatcher } from './src/note-matcher'
 // TODO: Implement input selection
 
 // EasyMIDI.getInputs()
-const InputName = 'Launchkey MK3 37 LKMK3 MIDI Out'
+const InputName = 'Digital Keyboard'
 
 async function main () {
   const input = new EasyMIDI.Input(InputName)
