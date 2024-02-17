@@ -1,4 +1,3 @@
-// TODO: Currently only major chords.
 export const challenges: Challenge[] = [
   {
     noteNames: [

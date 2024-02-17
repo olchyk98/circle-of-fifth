@@ -69,8 +69,10 @@ export class NoteMatcher {
 
     console.log('--------------------')
     if (!isEmpty(playedDiff)) {
+      const expectedNotes = map(convertNoteIdToName, this.expectedNoteIds)
       // Some notes were wrong.
       console.log('Some notes were played wrong!')
+      console.log('Expected:', expectedNotes)
     } else {
       console.log('Correct!')
     }

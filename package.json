@@ -6,7 +6,7 @@
   "author": "Oles Odynets <olchyk98@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "esbuild index.ts --platform=node --target=node12 --external:easymidi --bundle --sourcemap --outfile=dist/index.js",
+    "build": "esbuild index.ts --platform=node --target=node12 --external:easymidi --external:inquirer --bundle --sourcemap --outfile=dist/index.js",
     "prebuild": "yarn",
     "start": "yarn build && node --enable-source-maps dist",
     "prestart": "yarn",
@@ -19,6 +19,7 @@
     "@babel/preset-typescript": "^7.15.0",
     "@types/axios": "^0.14.0",
     "@types/bluebird": "^3.5.36",
+    "@types/inquirer": "^9.0.7",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.10.5",
     "@types/ramda": "^0.27.45",
@@ -37,6 +38,7 @@
     "axios": "^0.24.0",
     "bluebird": "^3.7.2",
     "easymidi": "^3.0.1",
+    "inquirer": "8",
     "ramda": "^0.27.1"
   }
 }
