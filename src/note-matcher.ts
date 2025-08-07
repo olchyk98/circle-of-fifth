@@ -9,10 +9,12 @@ import { randomChoice } from './utils'
 export class NoteMatcher {
   activeNotes: ActiveNote[]
   expectedNoteIds: number[]
+  winStreak: number
 
   constructor () {
     this.activeNotes = []
     this.expectedNoteIds = []
+    this.winStreak = 0
 
     this.reset()
   }
@@ -23,7 +25,7 @@ export class NoteMatcher {
     // Check for when the last note was played
     // and clean the storage if it was played
     // a while ago (player did a pause).
-    if (this.isStorageOld()) {
+    if (this.hasWaitedTooLongToAnswer()) {
       console.log('- You have waited too long -')
       this.reset()
     }
@@ -42,7 +44,7 @@ export class NoteMatcher {
     }
   }
 
-  isStorageOld () {
+  hasWaitedTooLongToAnswer () {
     const lastNote = last(this.activeNotes)
     if (!lastNote) return false
 
@@ -51,7 +53,7 @@ export class NoteMatcher {
   }
 
   validateChord () {
-    // Doing this is neccessary to "normalize" note IDs
+    // Doing this is necessary to "normalize" note IDs
     // and allow the same notes being played on multiple
     // octaves.
     const activeNotesId = map(
@@ -84,10 +86,17 @@ export class NoteMatcher {
   reset () {
     this.activeNotes = []
     this.createChallenge()
+    this.winStreak = 0
   }
 
   createChallenge () {
-    const challenge = randomChoice(challenges)
+    this.winStreak += 1
+    // Going from the first challenge to the last,
+    // basing index of current challenge on this.streak (since
+    // it is just like index is incremental).
+    const challenge = process.argv[2] === 'sequence'
+      ? challenges[this.winStreak]!
+      : randomChoice(challenges)
     const { noteNames: expectedNotes, triadName } = challenge
 
     this.expectedNoteIds = map(convertNameToNoteId, expectedNotes)
