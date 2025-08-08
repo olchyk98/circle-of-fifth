@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "esbuild index.ts --platform=node --target=node12 --external:easymidi --external:inquirer --bundle --sourcemap --outfile=dist/index.js",
-    "prebuild": "yarn",
-    "start": "yarn build && node --enable-source-maps dist",
-    "prestart": "yarn",
+    "prebuild": "pnpm install",
+    "start": "pnpm build && node --enable-source-maps dist",
+    "prestart": "pnpm install",
     "test": "jest --passWithNoTests --runInBand",
     "lint": "eslint ./**/*.ts",
     "typecheck": "tsc --noEmit --project tsconfig.json"
@@ -22,6 +22,7 @@
     "@types/inquirer": "^9.0.7",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.10.5",
+    "@types/p5": "^1.7.6",
     "@types/ramda": "^0.27.45",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^4.33.0",
@@ -39,6 +40,8 @@
     "bluebird": "^3.7.2",
     "easymidi": "^3.0.1",
     "inquirer": "8",
-    "ramda": "^0.27.1"
+    "p5": "^2.0.4",
+    "ramda": "^0.27.1",
+    "vite": "^7.1.1"
   }
 }
