@@ -1,52 +1,52 @@
 // NOTE: Must be in order from top to right, clockwise.
 export const majorChordMetas = [
   {
-    noteNames: [ 'A', 'C#', 'E' ],
-    triadName: 'A',
-  },
-  {
-    noteNames: [ 'A#', 'D', 'F' ],
-    triadName: 'A#',
-  },
-  {
-    noteNames: [ 'B', 'D#', 'F#' ],
-    triadName: 'B',
-  },
-  {
     noteNames: [ 'C', 'E', 'G' ],
     triadName: 'C',
-  },
-  {
-    noteNames: [ 'C#', 'F', 'G#' ],
-    triadName: 'C#',
-  },
-  {
-    noteNames: [ 'D', 'F#', 'A' ],
-    triadName: 'D',
-  },
-  {
-    noteNames: [ 'D#', 'G', 'A#' ],
-    triadName: 'D#',
-  },
-  {
-    noteNames: [ 'E', 'G#', 'B' ],
-    triadName: 'E',
-  },
-  {
-    noteNames: [ 'F', 'A', 'C' ],
-    triadName: 'F',
-  },
-  {
-    noteNames: [ 'F#', 'A#', 'C#' ],
-    triadName: 'F#',
   },
   {
     noteNames: [ 'G', 'B', 'D' ],
     triadName: 'G',
   },
   {
+    noteNames: [ 'D', 'F#', 'A' ],
+    triadName: 'D',
+  },
+  {
+    noteNames: [ 'A', 'C#', 'E' ],
+    triadName: 'A',
+  },
+  {
+    noteNames: [ 'E', 'G#', 'B' ],
+    triadName: 'E',
+  },
+  {
+    noteNames: [ 'B', 'D#', 'F#' ],
+    triadName: 'B',
+  },
+  {
+    noteNames: [ 'F#', 'A#', 'C#' ],
+    triadName: 'F#',
+  },
+  {
+    noteNames: [ 'C#', 'F', 'G#' ],
+    triadName: 'C#',
+  },
+  {
     noteNames: [ 'G#', 'C', 'D#' ],
     triadName: 'G#',
+  },
+  {
+    noteNames: [ 'D#', 'G', 'A#' ],
+    triadName: 'D#',
+  },
+  {
+    noteNames: [ 'A#', 'D', 'F' ],
+    triadName: 'A#',
+  },
+  {
+    noteNames: [ 'F', 'A', 'C' ],
+    triadName: 'F',
   },
 ]
 
@@ -56,48 +56,48 @@ export const minorChordMetas = [
     triadName: 'Am',
   },
   {
-    noteNames: [ 'A#', 'C#', 'F' ],
-    triadName: 'A#m',
+    noteNames: [ 'E', 'G', 'B' ],
+    triadName: 'Em',
   },
   {
     noteNames: [ 'B', 'D', 'F#' ],
     triadName: 'Bm',
   },
   {
-    noteNames: [ 'C', 'D#', 'G' ],
-    triadName: 'Cm',
+    noteNames: [ 'F#', 'A', 'C#' ],
+    triadName: 'F#m',
   },
   {
     noteNames: [ 'C#', 'E', 'G#' ],
     triadName: 'C#m',
   },
   {
-    noteNames: [ 'D', 'F', 'A' ],
-    triadName: 'Dm',
+    noteNames: [ 'G#', 'B', 'D#' ],
+    triadName: 'G#m',
   },
   {
     noteNames: [ 'D#', 'F#', 'A#' ],
     triadName: 'D#m',
   },
   {
-    noteNames: [ 'E', 'G', 'B' ],
-    triadName: 'Em',
+    noteNames: [ 'A#', 'C#', 'F' ],
+    triadName: 'A#m',
   },
   {
     noteNames: [ 'F', 'G#', 'C' ],
     triadName: 'Fm',
   },
   {
-    noteNames: [ 'F#', 'A', 'C#' ],
-    triadName: 'F#m',
+    noteNames: [ 'C', 'D#', 'G' ],
+    triadName: 'Cm',
   },
   {
     noteNames: [ 'G', 'A#', 'D' ],
     triadName: 'Gm',
   },
   {
-    noteNames: [ 'G#', 'B', 'D#' ],
-    triadName: 'G#m',
+    noteNames: [ 'D', 'F', 'A' ],
+    triadName: 'Dm',
   },
 ]
 

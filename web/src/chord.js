@@ -1,10 +1,22 @@
 import { Circle } from './circle'
+import { MIDIManager } from './midi-manager'
 
 export class Chord {
   constructor ({ chord, angle, placement }) {
     this.chord = chord
     this.angle = angle
     this.placement = placement
+  }
+
+  getColor () {
+    const playing = MIDIManager.playingChord === this.chord
+    const challenged = MIDIManager.currentChallenge?.triadName === this.chord
+    if (playing) return 'white'
+    if (challenged) {
+      const completedChallenge = MIDIManager.challengePendingSince != null
+      return completedChallenge ? 'lime' : 'orange'
+    }
+    return 'gray'
   }
 
   draw (p) {
@@ -17,8 +29,9 @@ export class Chord {
     // PI*1.5 - starts at the top of the circle
     // Converting degrees into radiants
     const angle = p.PI*1.5 + _angle * p.PI/180
+    const color = this.getColor()
 
-    p.fill('white')
+    p.fill(color)
     p.textSize(size)
     p.textAlign(p.CENTER, p.CENTER)
     p.strokeWeight(0)
@@ -27,5 +40,6 @@ export class Chord {
       (circleD / 2 + space) * p.cos(angle) + p.width / 2,
       (circleD / 2 + space) * p.sin(angle) + p.height / 2,
     )
+    return this
   }
 }

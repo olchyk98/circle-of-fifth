@@ -1,5 +1,5 @@
 import { Chord } from './chord'
-import { majorChordMetas, minorChordMetas } from './chords-meta'
+import { majorChordMetas, minorChordMetas } from './chord-metas'
 
 function initiateChords () {
   return [
